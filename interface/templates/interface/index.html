@@ -1,0 +1,20 @@
+{% extends "interface/base.html" %}
+
+{% block title %} IRL Project {% endblock %}
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    <br><br>
+
+    <h4>What do you want to do?</h4>
+
+    <input type="submit" name="need" value="Add Trajectory">
+    <input type="submit" name="need" value="View All">
+    <input type="submit" name="need" value="Download Trajectories">
+</form>
+
+{% endblock %}
+

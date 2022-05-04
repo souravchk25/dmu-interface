@@ -1,0 +1,27 @@
+{% extends "interface/base.html" %}
+
+
+{% block content %}
+<br><br>
+<p>
+    Enter a trajectory of size at-most 30 for the above grid world. The states are indexed from 0 to 24 starting
+    from the bottom-left. The actions are indexed as right(0), up(1), left(2) and down(3). The format of the trajectory
+    will be s0,a0,s1,a1..
+</p>
+<p>
+    <span style="text-decoration:underline">Example</span>: 0,1,9,0,8,1 is a trajectory of size 6.
+</p>
+<br><br>
+<form action="" method="post">
+    {% csrf_token %}
+
+    {% if message %}
+        <h4 style="color: green;"> {{ message }} </h4>
+    {% endif %}
+
+    {{ form }}
+
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .content {
+      background-color: lightgrey;
+      text-align: center;
+      justify-content:center;
+      width: 50%;
+      border: 3px solid green;
+      padding: 10px;
+      font-family:verdana;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    p {
+      font-size: small;
+      color: darkblue;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <title> {% block title %} IRL Project Spring 22 {% endblock %} </title>
+</head>
+<body>
+
+
+<div class="content">
+  <h2>DMU Spring 22 Project Interface - IRL</h2>
+
+  <h5>By Tuhina, Alexa and Sourav.</h5>
+
+  <br>
+
+  {% load static %}
+  <h5>The Grid World!</h5>
+  <img src=" {% static 'interface/gw_indexed.png' %}" alt="Grid World!" width="400" height="400">
+
+  {% block content %} {% endblock %}
+</div>
+</body>
+</html>
